@@ -1,0 +1,99 @@
+<dom-module id="main-app">
+  <template>
+    <style>
+      :host {
+        display: block;
+
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+
+        --paper-icon-button: {
+          cursor: default;
+          border: 2px solid darkgray;
+          border-radius: 50%;
+        };
+
+        --paper-icon-button-disabled: {
+          border-color: rgba(0, 0, 0, 0);
+        };
+
+        --paper-tab-ink: blue;
+        --paper-tabs-selection-bar-color: blue;
+      }
+
+      .card {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin: 5px;
+        width: 49%;
+      }
+
+      h4 {
+        margin-bottom: 0;
+      }
+
+      .content {
+        padding: 10px;
+      }
+    </style>
+
+    <app-model id="model"></app-model>
+
+    <paper-header-panel class="fit">
+      <paper-toolbar class="layout horizontal center center-justified">
+        <h2>Russian Study Buddy</h2>
+      </paper-toolbar>
+
+      <paper-tabs selected="{{currentTab}}">
+        <paper-tab>Nouns</paper-tab>
+        <paper-tab>Adjectives</paper-tab>
+        <paper-tab>Verbs</paper-tab>
+      </paper-tabs>
+
+      <iron-pages selected="{{currentTab}}">
+        <div> <!-- Noun View -->
+          <dom-module id="noun-declensions">
+            <template>
+              <div> Masculine: </div>
+              <template is="dom-repeat" items="{{WordGroup}}">
+                <div># <span>{{WordGroup.name}}</span></div>
+                <div>{{item.}} <span>{{item.first}}</span></div>
+                <!--<div>Last name: <span>{{item.last}}</span></div>-->
+              </template>
+            </template>
+
+            <!--<template>-->
+              <!--<div> Masculine: </div>-->
+              <!--<template is="dom-repeat" items="{{m-nouns}}">-->
+                <!--<div># <span>{{index}}</span></div>-->
+                <!--<div>First name: <span>{{item.first}}</span></div>-->
+                <!--<div>Last name: <span>{{item.last}}</span></div>-->
+              <!--</template>-->
+            <!--</template>-->
+
+          </dom-module>
+        </div>
+
+        <div>Page 2</div>
+        <div>Page 3</div>
+      </iron-pages>
+
+      <!--<div class="fit layout horizontal start center-justified content">-->
+        <!--<paper-material elevation="1" class="card layout vertical">-->
+          <!--<h4>Original</h4>-->
+          <!--<paper-textarea value="{{originalMessage}}"></paper-textarea>-->
+          <!--<paper-icon-button src="[[encryptIconPath]]" on-tap="onEncrypt" disabled$="[[disableButton(originalMessage)]]"></paper-icon-button>-->
+        <!--</paper-material>-->
+
+        <!--<paper-material elevation="1" class="card layout vertical">-->
+          <!--<h4>Encrypted</h4>-->
+          <!--<paper-textarea value="{{encryptedMessage}}" spellcheck="false"></paper-textarea>-->
+          <!--<paper-icon-button src="[[decryptIconPath]]" on-tap="onDecrypt" disabled$="[[disableButton(encryptedMessage)]]"></paper-icon-button>-->
+        <!--</paper-material>-->
+      <!--</div>-->
+    </paper-header-panel>
+  </template>
+</dom-module>

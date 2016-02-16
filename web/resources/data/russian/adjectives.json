@@ -1,0 +1,118 @@
+{
+  "adjectives": {
+    "masculine": [
+      {
+        "word": "новый",
+        "nominative": {
+          "singular": "новый",
+          "plural": "новые"
+        },
+        "accusative": {
+          "singular": "новый нового",
+          "plural": "новые новых"
+        },
+        "genetive": {
+          "singular": "нового",
+          "plural": "новых"
+        },
+        "dative": {
+          "singular": "новому",
+          "plural": "новам"
+        },
+        "instrumental": {
+          "singular": "новом",
+          "plural": "новами"
+        },
+        "prepositional": {
+          "singular": "новом",
+          "plural": "новых"
+        }
+      },
+      {
+        "word": "брат",
+        "nominative": {
+          "singular": "брат",
+          "plural": "братья"
+        },
+        "accusative": {
+          "singular": "брата",
+          "plural": "братьев"
+        },
+        "genetive": {
+          "singular": "брата",
+          "plural": "братьев"
+        },
+        "dative": {
+          "singular": "брату",
+          "plural": "братам"
+        },
+        "instrumental": {
+          "singular": "братом",
+          "plural": "братами"
+        },
+        "prepositional": {
+          "singular": "брате",
+          "plural": "брат--"
+        }
+      }
+    ],
+    "feminine": [
+      {
+        "word": "книга",
+        "nominative": {
+          "singular": "книга",
+          "plural": "книги"
+        },
+        "accusative": {
+          "singular": "книгу",
+          "plural": "книги"
+        },
+        "genetive": {
+          "singular": "книгой",
+          "plural": "книга"
+        },
+        "dative": {
+          "singular": "книге",
+          "plural": "книгой"
+        },
+        "instrumental": {
+          "singular": "книге",
+          "plural": "книгами"
+        },
+        "prepositional": {
+          "singular": "книге",
+          "plural": "книгах"
+        }
+      }
+    ],
+    "neuter": [
+      {
+        "word": "",
+        "nominative": {
+          "singular": "",
+          "plural": ""
+        },
+        "accusative": {
+          "singular": "",
+          "plural": ""
+        },
+        "genetive": {
+          "singular": "",
+          "plural": ""
+        },
+        "dative": {
+          "singular": "",
+          "plural": ""
+        },
+        "instrumental": {
+          "singular": "",
+          "plural": ""
+        },
+        "prepositional": {
+          "singular": "",
+          "plural": ""
+        }
+      }
+    ]
+  }
+}
