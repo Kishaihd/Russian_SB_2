@@ -30,8 +30,8 @@ class AppModel extends PolymerElement with AutonotifyBehavior, Observable{
   void ready() {
     log.info("$runtimeType::ready()");
     loadNouns();
-//    loadAdjectives();
-//    loadVerbs();
+    loadAdjectives();
+//    loadVerbs(); //todo: add data for verbs, then uncomment.
   }
 
   Future loadNouns() async {
@@ -42,7 +42,9 @@ class AppModel extends PolymerElement with AutonotifyBehavior, Observable{
   }
 
   Future loadAdjectives() async {
-     log.info("$runtimeType::loadNouns() -- $adjectives");
+    adjectives = new WordGroup.fromMap("adjectives", JSON.decode(await HttpRequest.getString("resources/data/russian/adjectives.json")));
+
+    log.info("$runtimeType::loadAdjectives() -- $adjectives");
   }
 
 //  Future loadVerbs() async {

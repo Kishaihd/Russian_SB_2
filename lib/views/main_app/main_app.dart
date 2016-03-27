@@ -20,6 +20,7 @@ import '../../services/logger.dart';
 import '../../models/app_model/app_model.dart';
 import '../../models/word.dart';
 import '../../models/word_group.dart';
+import '../declensions_view/declensions_view.dart';
 
 @PolymerRegister('main-app')
 class MainApp extends PolymerElement with AutonotifyBehavior, Observable {

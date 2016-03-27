@@ -54,30 +54,21 @@
       </paper-tabs>
 
       <iron-pages selected="{{currentTab}}">
-        <div> <!-- Noun View -->
-          <dom-module id="noun-declensions">
-            <template>
-              <div> Masculine: </div>
-              <template is="dom-repeat" items="{{WordGroup}}">
-                <div># <span>{{WordGroup.name}}</span></div>
-                <div>{{item.}} <span>{{item.first}}</span></div>
-                <!--<div>Last name: <span>{{item.last}}</span></div>-->
-              </template>
-            </template>
-
-            <!--<template>-->
-              <!--<div> Masculine: </div>-->
-              <!--<template is="dom-repeat" items="{{m-nouns}}">-->
-                <!--<div># <span>{{index}}</span></div>-->
-                <!--<div>First name: <span>{{item.first}}</span></div>-->
-                <!--<div>Last name: <span>{{item.last}}</span></div>-->
-              <!--</template>-->
-            <!--</template>-->
-
-          </dom-module>
+        <div id="nouns-page">
+          <h2 class="layout horizontal center center-justified"><strong>Masculine</strong></h2>
+          <declensions-view model="{{model.nouns.masculine}}"></declensions-view>
+          <h2 class="layout horizontal center center-justified"><strong>Feminine</strong></h2>
+          <declensions-view model="{{model.nouns.feminine}}"></declensions-view>
+          <h2 class="layout horizontal center center-justified"><strong>Neuter</strong></h2>
+          <declensions-view model="{{model.nouns.neuter}}"></declensions-view>
         </div>
 
-        <div>Page 2</div>
+        <div id="adj-page">
+          <declensions-view model="{{model.adjectives.masculine}}"></declensions-view>
+          <declensions-view model="{{model.adjectives.feminine}}"></declensions-view>
+          <declensions-view model="{{model.adjectives.neuter}}"></declensions-view>
+        </div>
+
         <div>Page 3</div>
       </iron-pages>
 

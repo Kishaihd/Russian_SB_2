@@ -1,0 +1,52 @@
+<dom-module id="declensions-view">
+  <template>
+    <style include="md-table"></style>
+    <style>
+      :host {
+        border: solid black 1px;
+        display: block;
+      }
+
+      .entry {
+        border: solid black 1px;
+        padding: 0.1px;
+      }
+    </style>
+
+    <div class="layout horizontal">
+      <template is="dom-repeat" items="{{model}}">
+        <table class="entry table table-hover table-bordered table-mc-blue" style="width: 50%">
+          <tr>
+            <td><strong>Case</strong></td>
+          </tr>
+          <tr>
+            <td>Nominative</td>
+            <td>{{item.nominative.singular}}</td>
+            <td>{{item.nominative.plural}}</td>
+          </tr>
+          <tr>
+            <td>Accusative</td>
+            <td>{{item.accusative.singular}}</td>
+            <td>{{item.accusative.plural}}</td>
+          </tr><tr>
+          <td>Genetive</td>
+          <td>{{item.genetive.singular}}</td>
+          <td>{{item.genetive.plural}}</td>
+        </tr><tr>
+          <td>Dative</td>
+          <td>{{item.dative.singular}}</td>
+          <td>{{item.dative.plural}}</td>
+        </tr><tr>
+          <td>Instrumental</td>
+          <td>{{item.instrumental.singular}}</td>
+          <td>{{item.instrumental.plural}}</td>
+        </tr><tr>
+          <td>Prepositional</td>
+          <td>{{item.prepositional.singular}}</td>
+          <td>{{item.prepositional.plural}}</td>
+        </tr>
+        </table>
+      </template>
+    </div>
+  </template>
+</dom-module>

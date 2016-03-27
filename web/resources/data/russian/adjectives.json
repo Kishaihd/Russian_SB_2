@@ -1,15 +1,11 @@
 {
-  "adjectives": {
     "masculine": [
       {
         "word": "новый",
         "nominative": {
-          "singular": "новый",
+          "singular-m": "новый",
+          "singular-n": "новое",
           "plural": "новые"
-        },
-        "accusative": {
-          "singular": "новый нового",
-          "plural": "новые новых"
         },
         "genetive": {
           "singular": "нового",
@@ -18,6 +14,10 @@
         "dative": {
           "singular": "новому",
           "plural": "новам"
+        },
+        "accusative": {
+          "singular-a": "Inanimate: Nominative\nAnimate: Genetive",
+          "plural": "новые новых"
         },
         "instrumental": {
           "singular": "новом",
@@ -92,15 +92,15 @@
           "singular": "",
           "plural": ""
         },
-        "accusative": {
-          "singular": "",
-          "plural": ""
-        },
         "genetive": {
           "singular": "",
           "plural": ""
         },
         "dative": {
+          "singular": "",
+          "plural": ""
+        },
+        "accusative": {
           "singular": "",
           "plural": ""
         },
@@ -114,5 +114,4 @@
         }
       }
     ]
-  }
 }
